@@ -20,13 +20,9 @@ func lavaMessageAddressesParser(_ codec.Codec, cosmosMsg sdk.Msg) ([]string, err
 
 	case *pairingtypes.MsgRelayPayment:
 		return []string{msg.Creator}, nil
-	case *pairingtypes.MsgStakeClient:
-		return []string{msg.Creator}, nil
 	case *pairingtypes.MsgStakeProvider:
 		return []string{msg.Creator}, nil
 	case *pairingtypes.MsgUnstakeProvider:
-		return []string{msg.Creator}, nil
-	case *pairingtypes.MsgUnstakeClient:
 		return []string{msg.Creator}, nil
 
 	case *confilcttypes.MsgConflictVoteCommit:
