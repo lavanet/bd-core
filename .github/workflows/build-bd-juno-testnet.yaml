@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Build Big Dipper Juno
+name: Build Big Dipper Juno (Testnet)
 
 # Controls when the workflow will run
 on:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Build, tag, and push docker image to GCP
         env:
-          REGISTRY: "us-central1-docker.pkg.dev/lavanet-testnet/growth-testnet-us-central1/bd-core"
+          REGISTRY: "us-central1-docker.pkg.dev/lavanet-testnet/growth-testnet-us-central1/bd-core-testnet"
           IMAGE_TAG: ${{ github.sha }}
           NOW: ${{ env.NOW }}
         run: |
